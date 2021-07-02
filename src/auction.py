@@ -102,7 +102,7 @@ def get_winner_entities(
     unique_creatives: IdCreativesMapType,
     number_winners: int,
     rng: np.random.Generator,
-):
+) -> List[Creative]:
     number_won = 0
     winner_entities = []
     for candidate in candidates:
@@ -128,7 +128,7 @@ def auction(
     number_winners: int,
     country: Optional[CountryType] = None,
     rng: Optional[np.random.Generator] = None,
-):
+) -> List[Creative]:
     if rng is None:
         rng = RNG
     # Build a dict of unique advertiser creatives with lowest price

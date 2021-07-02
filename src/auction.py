@@ -92,7 +92,7 @@ def pick_next_winners(
     else:
         # Pick ids equiprobable
         probabilities = get_probabilities(list_ids, unique_creatives)
-        winner_ids = rng.choice(list_ids, number_to_pick, p=probabilities)
+        winner_ids = rng.choice(list_ids, number_to_pick, p=probabilities, replace=False)
 
     return winner_ids
 
